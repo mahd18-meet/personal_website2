@@ -1,0 +1,12 @@
+.center{
+	text-align: center;
+
+}
+
+body{
+	background-color: #ccc074;
+}
+
+#login {
+	text-align: right;
+}

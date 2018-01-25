@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Shortener</title>
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+
+<div id="login">	
+	<p><a href="/login">Login</a></p>
+	</div>
+<div class="center">
+<br>
+<br>
+<h1> Shorten your links! </h1>
+
+
+ <h3> Enter your link below : </h3> 
+ <form method='post' action="/">
+ 	
+ 	<input type="text" name="original_link">
+ 	<br>
+ 	<h4> Enter a personalized shortened link (optional): </h4>
+ 	<p>inputurlhere/<input type="text" name="spl"> <!-- Shortened personalized link -->
+ 	<br>
+ 	<h4> What is your username? </h4> <input type="text" name="user">
+ 	<br>
+ 	<br>
+ 	 <input type="submit" value="Submit">
+
+ 	 
+ </form>	
+
+ {% if shortened_link %}
+ 	 <h3> This is your shortned link: shrt.com/{{ shortened_link }}</h3>
+
+ {% endif %}
+</body>
+</html>
