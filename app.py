@@ -71,7 +71,9 @@ def home():
         
         db.session.commit()
 
-        print "committed"
+        
+
+        
         
         
         
