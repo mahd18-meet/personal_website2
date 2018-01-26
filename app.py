@@ -54,10 +54,10 @@ def home():
 
     if request.method == "GET":
         #show the webpage
-        print "This is GET"
+        
         return render_template('home.html') 
     elif request.method=="POST":
-        print "This is post"
+        
 
         
         shortened_link=random_letters()
