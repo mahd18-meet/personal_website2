@@ -2,11 +2,11 @@ from flask import Flask, render_template, request, redirect , url_for
 from flask.ext.sqlalchemy import SQLAlchemy
 
 
-# from flask.ext.heroku import Heroku
+from flask.ext.heroku import Heroku
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./database.db'
-# heroku = Heroku(app)
+heroku = Heroku(app)
 db = SQLAlchemy(app)
     
 # Create our database model
