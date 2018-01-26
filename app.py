@@ -6,7 +6,7 @@ from flask.ext.heroku import Heroku
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./database.db'
-heroku = Heroku(app)
+heroku = Heroku(app)    
 db = SQLAlchemy(app)
     
 # Create our database model
