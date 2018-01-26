@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect , url_for
 from flask.ext.sqlalchemy import SQLAlchemy
 
 
@@ -22,7 +22,7 @@ class Links(db.Model):
         self.shortened_link = shortened_link
 
     def __repr__(self):
-        return '<User %r, original link %r , shortened link %r>' % self.user, self.original_link, self.shortened_link
+        return '<User %r, original link %r , shortened link %r>' % (self.user, self.original_link, self.shortened_link)
 
 db.create_all()
 # Set "homepage" to index.html
@@ -78,6 +78,18 @@ def home():
 
         
         return render_template('home.html' ,shortened_link=shortened_link )
+
+
+@app.route('/link/<link>')
+def submit(link):   
+    link=Links.query.filter_by(shortened_link=link).first()
+    x = link.original_link
+    return render_template('gtl.html' ,link=x)
+
+
+   
+
+
 
 
 
