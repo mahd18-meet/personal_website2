@@ -21,7 +21,7 @@
  	<input type="text" name="original_link">
  	<br>
  	<h4> Enter a personalized shortened link (optional): </h4>
- 	<p>127.0.0.1:5000/<input type="text" name="spl"> <!-- Shortened personalized link -->
+ 	<p>https://smll.herokuapp.com/link/<input type="text" name="spl"> <!-- Shortened personalized link -->
  	<br>
  	<h4> What is your username? </h4> <input type="text" name="user">
  	<br>
@@ -32,7 +32,7 @@
  </form>	
 <br> <br>
  {% if shortened_link %}
- 	 <h3> This is your shortned link: 127.0.0.1:5000/link/{{ shortened_link }}</h3>
+ 	 <h3> This is your shortned link: https://smll.herokuapp.com/link/{{ shortened_link }}</h3>
  	 <br> <br> <br>
 
  {% endif %}
