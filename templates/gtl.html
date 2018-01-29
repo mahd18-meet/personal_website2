@@ -5,13 +5,17 @@
 
 
 
-<meta http-equiv="refresh" content="0; URL='{{link}}'">
 
 
 
 </head>
 <body>
-<h1> {{link}} </h1>
+<p id="link" > {{link}} </p>
+<script type="text/javascript"> var x = document.getElementById("link").innerHTML;
+alert(x);
+
+window.location.reload(x);
+ </script>
 
 </body>
 </html>
