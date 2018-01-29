@@ -86,7 +86,7 @@ def home():
 def submit(link):   
     link=Links.query.filter_by(shortened_link=link).first()
     x = link.original_link
-    return render_template('gtl.html' ,link=x)
+    return redirect(x)
 
 
    
