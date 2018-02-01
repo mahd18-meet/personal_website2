@@ -108,9 +108,9 @@ def login():
         
         return render_template('login.html') 
     elif request.method=="POST":
-        print "User is being"
+        # print("User is being")
         user = request.form['username']
-        print "Added User"
+        # print "Added User"
         return redirect('/profile/'+user)
 
         #Add user n shit       
@@ -122,7 +122,7 @@ def login():
 @app.route('/profile/<user>')
 def profile(user):
     users=Links.query.filter_by(user=user).all()
-    print users
+    # print users
     
     return render_template('profile.html', users = users)
 
