@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" rel="stylesheet">
+<nav>
+	<div class="topnav">
+  		<a class="active" href="/">Home</a>
+  		<a href="/login">Profile</a>
+  		<a href="/about">About</a>
+  		<a id="login-button" href="/login">Login</a>
+	</div>
+</head>
+<body>
+
+
+<!-- Do stuff -->
+
+
+<p> {% for user in users %} 
+{{ user }}
+<br>
+{% endfor %}
+</p>
+
+
+
+
+
+
+</body>
+</html>

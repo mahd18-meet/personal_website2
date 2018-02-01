@@ -9,7 +9,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./database.db'
 heroku = Heroku(app)    
 db = SQLAlchemy(app)
     
-# Create our database model
+# Create our database modelww 
 class Links(db.Model):
     __tablename__ = "links"
     id = db.Column( db.Integer, primary_key=True)
@@ -79,7 +79,13 @@ def home():
         
 
         
+
         return render_template('home.html' ,shortened_link=shortened_link )
+
+
+
+
+        
 
 
 @app.route('/link/<link>')
@@ -89,8 +95,48 @@ def submit(link):
     return redirect(x)
 
 
-   
 
+
+
+
+
+
+@app.route('/login' ,methods=['GET', 'POST'])
+def login():
+    if request.method == "GET":
+    #show the webpage
+        
+        return render_template('login.html') 
+    elif request.method=="POST":
+        print "User is being"
+        user = request.form['username']
+        print "Added User"
+        return redirect('/profile/'+user)
+
+        #Add user n shit       
+
+
+
+
+
+@app.route('/profile/<user>')
+def profile(user):
+    users=Links.query.filter_by(user=user).all()
+    print users
+    
+    return render_template('profile.html', users = users)
+
+
+
+
+
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+   
 
 
 
@@ -98,3 +144,4 @@ def submit(link):
 if __name__ == '__main__':
     app.debug = True
     app.run()
+

@@ -1,12 +1,47 @@
-.center{
+.text-center{
 	text-align: center;
 
 }
 
 body{
-	background-color: #537791;
+	background-color: #609dff;
 }
 
 #login {
 	text-align: right;
+}
+.topnav {
+    background-color: #609dff;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 30px;
+    margin-top: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: ;
+    color: white;
+}
+
+#login{
+	text-align: right;
+}
+
+table, th, td {
+    border: 1px solid black;
 }

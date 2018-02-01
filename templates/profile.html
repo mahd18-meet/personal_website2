@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Shortener</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+<nav>
+	<div class="topnav">
+  		<a class="active" href="/">Home</a>
+  		<a href="/login">Profile</a>
+  		<a href="/about">About</a>
+  		<a id="login-button" href="/login">Login</a>
+	</div>
+</head>
+<body>
+
+
+<center>
+<h1> Welcome User! </h1>
+
+<table style="width:100%">
+  <tr>
+ 
+    <th>Original Link</th> 
+    <th>Shortened link</th>
+  </tr>
+
+
+{% if users %}
+
+
+
+ {% for user in users %} 
+<tr>
+
+<td> {{user.original_link}} </td>
+<td> https://smll.herokuapp.com/link/{{user.shortened_link}} </td>
+
+</tr>
+{% endfor %}
+
+</table>
+
+
+
+</center>
+
+{% endif %}
+
+
+
+
+</body>
+
+
+</html>

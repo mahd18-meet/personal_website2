@@ -2,30 +2,32 @@
 <html>
 <head>
 	<title>Website Shortener</title>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="static/css/style.css">
-	
+<nav>
+	<div class="topnav">
+  		<a class="active" href="/">Home</a>
+  		<a href="/login">Profile</a>
+  		<a href="/about">About</a>
+  		<a id="login-button" href="/login">Login</a>
+	</div>
 
 </head>
 <body>
-
-
-<div id="login" >	
-	<p><a href="/login">Login</a></p>
-	</div>
-<div class="center">
 <br>
 <br>
 <h1 class="text-center"> Shorten your links! </h1>
-
-
+<br> <br>
+<div class ='text-center'>
  <h3> Paste your link here : </h3> 
  <form method='post' action="/">
  	
  	<input type="text" name="original_link">
  	<br>
- 	<h4> Enter a personalized shortened link (optional): </h4>
- 	<p>https://smll.herokuapp.com/link/<input type="text" name="spl"> <!-- Shortened personalized link -->
+ 	<h4> Enter a personalized shortened link:  </h4>
+ 	<p>https://lnkshrt.herokuapp.com/link/<input type="text" name="spl"> <!-- Shortened personalized link -->
  	<br>
  	<h4> What is your username? </h4> <input type="text" name="user">
  	<br>
@@ -34,6 +36,7 @@
 
  	 
  </form>	
+ </div>
 <br> <br>
  {% if shortened_link %}
  	 <h3> This is your shortened link: https://smll.herokuapp.com/link/{{ shortened_link }}</h3>
