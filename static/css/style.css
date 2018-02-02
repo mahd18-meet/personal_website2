@@ -3,8 +3,14 @@
 
 }
 
+html {
+    overflow-x: hidden;
+
+}
+
 body{
-	background-color: #609dff;
+	
+    background-color: #609dff;
 }
 
 #login {
@@ -45,3 +51,7 @@ body{
 table, th, td {
     border: 1px solid black;
 }
+
+.bs-example{
+        margin: 20px;
+    }
